@@ -1,0 +1,468 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    padding-bottom: 0px;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+
+/*..........Search section............*/
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #4c6ef5;
+    padding: 5px;
+    border-radius: 50px;
+    width: 400px; 
+    
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+
+}
+
+.search-btn {
+    background: #ff4f70;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.search-btn:hover {
+    background: #ff304f;
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+.search-input:focus {
+    width: 400px;
+    background: #f5f5f5;
+}
+
+
+.buttons a {
+    margin-right: 36px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.login {
+    padding: 10px 20px;
+    border: 1.5px solid #6c2bd9;      
+    background-color: #f3e8ff;         
+    color: #6c2bd9;                    
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+.sign_in {
+    background-color: #6c2bd9;   
+    color: white;               
+    border: none;
+}
+
+
+.login:hover {
+    background-color: #e9dbff;
+}
+
+.sign_in:hover {
+    background-color: #5a23b8;
+}
+
+
+.course-intro {
+    position: relative;
+    margin: 40px 0 20px 0;
+    background-color: rgb(239, 246, 249);
+    padding: 55px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-logo {
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+.course-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+}
+
+.course-details {
+    display: flex; 
+}
+
+.level-container{
+    font-size: 13px;
+    background-color: #1a73e8;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-bottom: 14.5px;
+    margin-left: 15px;
+}
+
+
+.rating {
+    font-size: 18px;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.stars {
+    color: #f39c12;
+    margin-right: 7px;
+}
+
+.rating-count {
+    font-size: 16px;
+    color: #f39c12;
+}
+
+.course-description {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    margin-bottom: 20px; 
+}
+
+.enroll-button {
+    background: linear-gradient(135deg, #1e3a8a, #1cc88a);
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.enroll-button:hover {
+    background: linear-gradient(135deg, #3b5b9b, #3fd29d);
+}
+
+.course-highlights {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #0c5abf;
+    display: flex;
+    align-items: center;
+}
+
+.highlight i {
+    margin-right: 8px;
+    color: #1cc88a;
+}
+
+.background-image {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 450px;
+    border-radius: 15px;
+    filter: brightness(80%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-header {
+    padding-top: 1.5rem;
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+.course-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    margin-bottom: 40px; 
+}
+
+.module {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease; 
+    border-left: 5px solid #1a73e8; 
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.module-header h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.time {
+    background-color: #4e73df;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.time i {
+    margin-right: 5px; 
+}
+
+.module-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 10px;
+}
+
+.module-included {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 15px 0;
+    border: 5px solid #fff;  
+    border-radius: 8px;  
+    padding: 15px;  
+    box-shadow: 10px 6px 15px rgba(0, 0, 0, 0.1);  
+}
+
+.included-icon {
+    color: #1a73e8;
+    font-size: 1.05rem;
+    gap: 50px;
+    display: flex;
+    margin-top: 20px;
+}
+
+
+.python-skills {
+    background: linear-gradient(135deg, #1e3a8a, #1cc88a);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1145px;
+    margin: 40px auto;
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+.python-skills h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+.python-skills ul {
+    list-style: none;
+    max-width: 600px;
+    padding: 0;
+    margin-left: 320px;
+}
+
+.python-skills ul li {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 1.32rem;
+    margin-bottom: 10px;
+}
+
+.python-skills ul li i {
+    color: yellow;
+    font-size: 1.5rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+.learner-reviews {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    
+}
+.learner-reviews h2 {
+    text-align:center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.review {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: calc(50% - 20px);
+    border-left: 5px solid #1a73e8;
+
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right:15px
+}
+
+.stars {
+    color: #f4c542;
+}
+
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+    margin-left: 43px;
+    margin-right: 43px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+.footer-container .col {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-container .col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff6600;
+}
+
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    margin-bottom: 10px;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-container ul li a:hover {
+    color: #ff6600;
+}
+
+.footer-container ul li a i {
+    margin-right: 8px;
+}
+
+.footer-logo{
+    
+    margin-bottom: 10px;
+}
+
+.line {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #bbb;
+}

@@ -1,0 +1,104 @@
+Database Queries
+--------------------
+
+-- Courses Table
+
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_image VARCHAR(255),
+    course_title VARCHAR(255),
+    course_description TEXT
+);
+
+
+INSERT INTO courses (course_image, course_title, course_description)
+VALUES (
+    'python.png', 
+    'Python Programming', 
+    'Unlock the power of Python and dive into the world of programming! Whether you are starting from scratch or looking to sharpen your skills, this course has everything you need to become proficient in one of the most versatile programming languages.'
+);
+
+
+
+-- Course Skill Table
+
+CREATE TABLE course_skills (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,  -- Foreign key linking to courses
+    skill VARCHAR(255) NOT NULL, 
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+
+INSERT INTO course_skills (course_id, skill) VALUES
+(1, 'Writing Python scripts'),
+(1, 'Understanding data types'),
+(1, 'Using loops and functions'),
+(1, 'Working with lists and dictionaries'),
+(1, 'Debugging and problem-solving');
+
+
+
+
+-- Modules Table (Each module belongs to a course)
+
+CREATE TABLE course_modules( 
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,  -- Link to the courses table
+    module_title VARCHAR(255),
+    module_duration VARCHAR(50),
+    module_description TEXT,
+    module_num_videos INT,
+    module_num_readings INT,
+    module_num_quizzes INT,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+-- Module 1
+INSERT INTO course_modules (course_id, module_title, module_duration, module_description, module_num_videos, module_num_readings, module_num_quizzes)
+VALUES (
+    1, 'Hello Python', 3, 
+    'Then, we’ll dive into the basics of programming languages and syntax, as well as automation using scripting. We’ll also introduce you to the Python programming language and cover some basic functions and keywords of the language, along with some arithmetic operations. Lastly, we\'ll go over some code editors and IDEs that you can use to write Python code.',
+    5, 20, 2
+);
+
+-- Module 2
+INSERT INTO course_modules (course_id, module_title, module_duration, module_description, module_num_videos, module_num_readings, module_num_quizzes)
+VALUES (
+    1, 'Basic Python Syntax', 4, 
+    'In this module you’ll learn about different data types in Python, how to identify them, and how to convert between them. You’ll also learn how to use variables to assign data and to reference variables. You’ll deep dive into functions: how to define them, pass them parameters, and have them return information. You’ll explore the concepts of code reuse, code style, and refactoring complex code, along with effectively using code comments. Finally, you’ll learn about comparing data using equality and logical operators, and leveraging these to build complex branching scripts using if statements.',
+    8, 10, 2
+);
+
+-- Module 3
+INSERT INTO course_modules (course_id, module_title, module_duration, module_description, module_num_videos, module_num_readings, module_num_quizzes)
+VALUES (
+    1, 'Loops', 3, 
+    'In this module you\'ll explore the intricacies of loops in Python! You\'ll learn how to use while loops to continuously execute code, as well as how to identify infinite loop errors and how to fix them. You\'ll also learn to use for loops to iterate over data, and how to use the range() function with for loops. You\'ll also explore common errors when using for loops and how to fix them.',
+    5, 8, 2
+);
+
+-- Module 4
+INSERT INTO course_modules (course_id, module_title, module_duration, module_description, module_num_videos, module_num_readings, module_num_quizzes)
+VALUES (
+    1, 'Strings, Lists, Dictionaries', 5, 
+    'In this module you\'ll dive into more advanced ways to manipulate strings using indexing, slicing, and advanced formatting. You\'ll also explore the more advanced data types: lists, tuples, and dictionaries. You\'ll learn to store, reference, and manipulate data in these structures, as well as combine them to store complex data structures.',
+    10, 15, 2
+);
+
+
+
+-- Videos Table (Each video belongs to a module)
+
+CREATE TABLE videos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    module_id INT,  -- Link to the course_modules table instead of courses
+    video_id VARCHAR(50),
+    FOREIGN KEY (module_id) REFERENCES course_modules(id) ON DELETE CASCADE
+);
+
+INSERT INTO videos (module_id, video_id) VALUES
+(1, '1069543270'),  -- Hello Python
+(2, '1069543378'),  -- Basic Python Syntax
+(3, '1069543900'),  -- Loops
+(4, '1070430831');  -- Strings, Lists, Dictionaries
