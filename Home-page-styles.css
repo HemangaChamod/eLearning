@@ -622,3 +622,48 @@ footer {
     font-size: 14px;
     color: #bbb;
 }
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image_section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .text_section {
+        text-align: center;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-container,
+    .buttons {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .program_card {
+        width: 100%;
+    }
+
+    .review {
+        flex-direction: column;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
